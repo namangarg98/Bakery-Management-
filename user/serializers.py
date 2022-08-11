@@ -21,7 +21,7 @@ class CustomerRegister(serializers.ModelSerializer):
 class UserLoginSerializer(serializers.Serializer):
     username = serializers.CharField(write_only=True)
     password = serializers.CharField(
-        style={'input_type': 'password'}, trim_whitespace=False, write_only=True)
+        style={'input_type': 'password', 'placeholder': 'Password'}, trim_whitespace=False, write_only=True, required=True)
     token = serializers.CharField(read_only=True)
 
     def validate(self, data):
