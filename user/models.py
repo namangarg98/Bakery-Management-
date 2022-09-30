@@ -4,9 +4,9 @@ from django.contrib.auth.models import User, BaseUserManager, PermissionsMixin
 # Create your models here.
 
 
-class AdminsManager(BaseUserManager):
-    def get_queryset(self):
-        return User.get_queryset().filter(is_staff=True)
+# class AdminsManager(BaseUserManager):
+#     def get_queryset(self):
+#         return User.get_queryset().filter(is_staff=True)
 
 
 class CustomerManager(BaseUserManager):

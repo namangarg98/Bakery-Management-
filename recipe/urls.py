@@ -17,5 +17,7 @@ router.register('dishesapi', DishAPIModelViewSet,
 router.register('orderapi', OrderAPIModelViewSet,
                 basename='ingredients')
 urlpatterns = [
+    path('', api_overview),
     path('', include(router.urls)),
+
 ]
